@@ -1,0 +1,4 @@
+﻿
+> panacea-medcare-landing@0.1.0 lint
+> next lint
+
