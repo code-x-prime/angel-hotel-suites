@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, MessageCircle, HeartPulse, Clock } from "lucide-react";
+import { Phone,  HeartPulse, Clock } from "lucide-react";
+import Image from "next/image";
 
 export default function MedicalPackages() {
   const fadeUp = {
@@ -67,7 +68,7 @@ export default function MedicalPackages() {
                rel="noopener noreferrer"
                className="bg-[#25D366] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#20bd5a] transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
              >
-               <MessageCircle className="w-5 h-5" />
+                <Image src="/whatsapp.png" alt="WhatsApp" width={30} height={30} />
                WhatsApp Inquiry
              </a>
            </div>

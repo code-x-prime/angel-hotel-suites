@@ -80,7 +80,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-lg font-bold text-lg transition-all hover:-translate-y-1 flex items-center justify-center gap-2 shadow-lg"
             >
-              <MessageCircle className="w-5 h-5" />
+               <Image src="/whatsapp.png" alt="WhatsApp" width={30} height={30} />
               WhatsApp Booking
             </a>
             <a 

@@ -1,4 +1,5 @@
-import { MessageCircle } from "lucide-react";
+
+import Image from "next/image";
 
 const WhatsAppButton = () => (
     <a
@@ -9,7 +10,7 @@ const WhatsAppButton = () => (
         style={{ background: 'var(--color-primary-500)', color: 'white' }}
         aria-label="Chat on WhatsApp"
     >
-        <MessageCircle className="w-7 h-7 text-white" />
+       <Image src="/whatsapp.png" alt="WhatsApp" width={50} height={50} />
     </a>
 );
 
