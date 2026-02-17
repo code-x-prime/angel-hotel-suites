@@ -48,8 +48,8 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth cursor-none">
-      <body className={`${inter.variable} font-sans bg-background text-medical-text antialiased overflow-x-hidden cursor-none`}>
+    <html lang="en" className="scroll-smooth lg:cursor-none">
+      <body className={`${inter.variable} font-sans bg-background text-medical-text antialiased overflow-x-hidden lg:cursor-none`}>
         <CustomCursor />
         {children}
       </body>

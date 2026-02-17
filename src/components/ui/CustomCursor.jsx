@@ -32,7 +32,7 @@ export default function CustomCursor() {
 
   return (
     <div
-      className="fixed top-0 left-0 pointer-events-none z-[9999] transition-transform duration-100 ease-out"
+      className="hidden lg:block fixed top-0 left-0 pointer-events-none z-[9999] transition-transform duration-100 ease-out"
       style={{
         transform: `translate(${position.x}px, ${position.y}px) scaleX(-1)`,
       }}
