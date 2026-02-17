@@ -1,10 +1,27 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 
+const heroImages = [
+  "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=2000&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=2000&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=2000&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2000&auto=format&fit=crop"
+];
+
 export default function Hero() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, []);
+
   const fadeUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { 
@@ -25,20 +42,33 @@ export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
       
-      {/* Background with Overlay */}
+      {/* Background Slideshow with Overlay */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2000&auto=format&fit=crop"
-          alt="Angel Hotel Near Medanta"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-medical-dark/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-medical-dark/50 via-transparent to-medical-dark/20" />
+        <AnimatePresence mode="popLayout">
+          <motion.div
+            key={currentImage}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5 }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={heroImages[currentImage]}
+              alt="Angel Hotel Ambience"
+              fill
+              className="object-cover"
+              priority
+            />
+          </motion.div>
+        </AnimatePresence>
+        
+        {/* Overlays - these sit on top of the images but behind text */}
+        <div className="absolute inset-0 bg-medical-dark/30 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-medical-dark/50 via-transparent to-medical-dark/20 z-10" />
       </div>
 
-      <div className="container relative z-10 h-full flex flex-col justify-center items-center text-center pt-10">
+      <div className="container relative z-20 h-full flex flex-col justify-center items-center text-center pt-10">
         <motion.div
           initial="hidden"
           animate="visible"
