@@ -26,7 +26,7 @@ const CTASection = () => {
                         ⏰ Limited: Free Teleconsultation for this month only
                     </p>
                     <a
-                        href="https://wa.me/919958800961"
+                        href="https://wa.me/918448295915"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-primary inline-flex items-center justify-center gap-2 px-10 py-4 text-lg font-semibold"

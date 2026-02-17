@@ -34,7 +34,7 @@ export default function CTASection() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
              <AnimatedButton 
-                href="tel:+919958800961"
+                href="tel:+918448295915"
                 className="w-full sm:w-auto px-8 py-4 text-lg gap-3 shadow-xl hover:shadow-2xl hover:-translate-y-1"
              >
                 <Phone className="w-5 h-5" />

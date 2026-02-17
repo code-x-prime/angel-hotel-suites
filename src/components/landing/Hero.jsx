@@ -92,14 +92,14 @@ export default function Hero() {
           
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
             <a 
-              href="tel:+919958800961" 
+              href="tel:+918448295915" 
               className="w-full sm:w-auto px-8 py-4 bg-medical-primary hover:bg-medical-dark text-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" />
               Call Now
             </a>
             <a 
-              href="https://wa.me/919958800961" 
+              href="https://wa.me/918448295915" 
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-lg font-bold text-lg transition-all hover:-translate-y-1 flex items-center justify-center gap-2 shadow-lg"

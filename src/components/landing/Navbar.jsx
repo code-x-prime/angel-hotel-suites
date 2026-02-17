@@ -145,7 +145,7 @@ export default function Navbar() {
             className="hidden lg:flex items-center gap-6"
           >
             <a
-              href="tel:+919958800961"
+              href="tel:+918448295915"
               className={cn(
                 "flex items-center gap-2 text-sm font-semibold transition-colors duration-300",
                 scrolled
@@ -154,7 +154,7 @@ export default function Navbar() {
               )}
             >
               <Phone className="w-4 h-4" />
-              <span>+91 99588 00961</span>
+              <span>+91 84482 95915</span>
             </a>
             <AnimatedButton
               href="#booking"
@@ -229,7 +229,7 @@ export default function Navbar() {
               ))}
               <div className="pt-8 flex flex-col gap-4">
                 <a
-                  href="tel:+919958800961"
+                  href="tel:+918448295915"
                   className="bg-medical-primary/10 text-medical-primary w-full py-3 rounded-md font-semibold text-center border border-medical-primary/20 flex items-center justify-center gap-2 hover:bg-medical-primary/20 transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >

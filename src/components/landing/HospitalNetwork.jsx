@@ -94,7 +94,7 @@ export default function Rooms() {
                    ))}
                 </div>
                 
-                <a href="https://wa.me/919958800961" target="_blank" className="w-full py-3 rounded-lg bg-slate-50 border border-slate-200 text-heading font-semibold hover:bg-medical-primary hover:text-white hover:border-medical-primary transition-all text-center flex items-center justify-center gap-2">
+                <a href="https://wa.me/918448295915" target="_blank" className="w-full py-3 rounded-lg bg-slate-50 border border-slate-200 text-heading font-semibold hover:bg-medical-primary hover:text-white hover:border-medical-primary transition-all text-center flex items-center justify-center gap-2">
                     Check Availability <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

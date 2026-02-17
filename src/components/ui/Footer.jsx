@@ -45,7 +45,7 @@ const Footer = () => {
                                 <Phone className="w-5 h-5 text-[var(--color-primary-700)] flex-shrink-0 mt-0.5" />
                                 <div>
                                     <p className="font-semibold">Call Us Now</p>
-                                    <p className="text-[var(--color-text-medium)]">+91-9958800961</p>
+                                    <p className="text-[var(--color-text-medium)]">+91-8448295915</p>
                                     <p className="text-[var(--color-text-medium)] text-xs">24/7 Available</p>
                                 </div>
                             </div>

@@ -52,10 +52,10 @@ const Header = () => {
 
                 <div className="hidden lg:flex items-center gap-4">
                     <a
-                        href="tel:+919958800961"
+                        href="tel:+918448295915"
                         className="flex items-center gap-2 text-sm font-medium text-[var(--color-primary-700)]"
                     >
-                        <Phone className="w-4 h-4" /> +91 995 880 0961
+                        <Phone className="w-4 h-4" /> +91 84482 95915
                     </a>
                     <a
                         href="#cta"
