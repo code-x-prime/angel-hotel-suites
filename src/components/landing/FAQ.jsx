@@ -19,29 +19,41 @@ const faqs = [
     answer: "Yes, we have elevator access to all floors and our staff is trained to assist patients with mobility needs."
   },
   {
-    question: "Is it safe for families?",
+    question: "Is the hotel safe for families?",
     answer: "Absolutely. We are a family-oriented hotel in a safe neighborhood (Sector 38). We have 24/7 front desk presence and CCTV surveillance."
   }
 ];
 
 export default function FAQ() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white overflow-hidden">
       <div className="container max-w-3xl px-6">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="text-center mb-16"
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-medical-heading mb-4">
             Frequently Asked Questions
           </h2>
           <p className="text-slate-600 text-lg">
             Everything you need to know about your stay.
           </p>
-        </div>
+        </motion.div>
         
-        <div className="space-y-2">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="space-y-2"
+        >
           {faqs.map((faq, index) => (
             <FAQItem key={index} faq={faq} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -52,32 +64,39 @@ function FAQItem({ faq }) {
 
   return (
     <div className="border-b border-slate-200">
-      <button 
+      <motion.button 
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between py-6 text-left focus:outline-none group"
+        className="w-full flex items-center justify-between py-6 text-left focus:outline-none group rounded-lg px-2 -mx-2 transition-colors duration-300 hover:bg-slate-50/50"
+        aria-expanded={isOpen}
       >
         <span className={cn(
-            "text-lg font-semibold transition-colors",
+            "text-lg font-semibold transition-colors duration-300",
             isOpen ? "text-medical-primary" : "text-slate-800 group-hover:text-medical-primary"
         )}>
             {faq.question}
         </span>
-        <ChevronDown 
-            className={cn(
-                "w-5 h-5 text-slate-400 transition-transform duration-300",
-                isOpen && "rotate-180 text-medical-primary"
-            )} 
-        />
-      </button>
+        <motion.div
+           animate={{ rotate: isOpen ? 180 : 0 }}
+           transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
+            <ChevronDown 
+                className={cn(
+                    "w-5 h-5 text-slate-400 transition-colors duration-300",
+                    isOpen && "text-medical-primary"
+                )} 
+            />
+        </motion.div>
+      </motion.button>
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
+            initial={{ height: 0, opacity: 0, y: -10 }}
+            animate={{ height: "auto", opacity: 1, y: 0 }}
+            exit={{ height: 0, opacity: 0, y: -10 }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="pb-6 text-slate-600 leading-relaxed font-light text-lg">
+            <div className="pb-6 px-2 text-slate-600 leading-relaxed font-light text-lg">
               {faq.answer}
             </div>
           </motion.div>

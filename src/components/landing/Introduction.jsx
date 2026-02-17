@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
+import Image from "next/image";
+
 
 export default function Introduction() {
   return (
@@ -28,23 +29,22 @@ export default function Introduction() {
             you need peace, cleanliness, and supportive hospitality.
           </p>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-left max-w-3xl mx-auto">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-left max-w-4xl mx-auto">
              {[
-               "Calm, hygienic environment",
-               "Spacious AC rooms with private bathrooms",
-               "Easy lift access (no stairs stress)",
-               "Flexible stay options",
-               "Friendly, understanding staff"
+               { text: "Calm, hygienic environment", icon: "/Medical/calm-hygienic-environment.svg" },
+               { text: "Spacious AC rooms with private bathrooms", icon: "/Medical/spacious-ac-rooms-with-private-bathrooms.svg" },
+               { text: "Easy lift access (no stairs stress)", icon: "/Medical/easy-lift-access.svg" },
+               { text: "Flexible stay options", icon: "/Medical/flexible-stay-options.svg" },
+               { text: "Friendly, understanding staff", icon: "/Medical/friendly-understanding-staff.svg" },
+               { text: "Hosts patients & families regularly", icon: "/Medical/hosts-patients-families-regularly.svg" }
              ].map((item, i) => (
                <div key={i} className="flex items-start gap-3">
-                 <div className="mt-1"><CheckCircle className="w-5 h-5 text-green-500" /></div>
-                 <span className="text-slate-700 font-medium text-lg">{item}</span>
+                 <div className="mt-1 flex-shrink-0">
+                    <Image src={item.icon} alt="" width={30} height={30} className="w-10 h-10 object-contain" />
+                 </div>
+                 <span className="text-slate-700 font-medium text-lg">{item.text}</span>
                </div>
              ))}
-             <div className="flex items-start gap-3">
-                 <div className="mt-1"><CheckCircle className="w-5 h-5 text-green-500" /></div>
-                 <span className="text-slate-700 font-medium text-lg">Hosts patients & families regularly</span>
-               </div>
           </div>
           
           <div className="mt-12 h-1 w-24 bg-medical-primary/20 mx-auto rounded-full"></div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone,  HeartPulse, Clock } from "lucide-react";
+import { Phone, Clock } from "lucide-react";
 import Image from "next/image";
 
 export default function MedicalPackages() {
@@ -40,16 +40,22 @@ export default function MedicalPackages() {
 
            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-12">
               {[
-                "Cancer Treatment",
-                "Surgery Recovery",
-                "Follow-up Visits",
-                "Transplant Care"
+                { title: "Cancer Treatment", icon: "/Treatment/cancer-treatment.svg" },
+                { title: "Surgery Recovery", icon: "/Treatment/surgery-recovery.svg" },
+                { title: "Follow-up Visits", icon: "/Treatment/Follow-up-visits.svg" },
+                { title: "Transplant Care", icon: "/Treatment/transplant-care.svg" }
               ].map((item, i) => (
-                <div key={i} className="bg-slate-50 border border-slate-100 p-6 rounded-lg hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-                   <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center mx-auto mb-3 text-medical-accent">
-                      <HeartPulse className="w-5 h-5" />
+                <div key={i} className="bg-slate-50 border border-slate-100 p-6 rounded-lg hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+                   <div className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                      <Image 
+                        src={item.icon} 
+                        alt={item.title} 
+                        width={32} 
+                        height={32} 
+                        className="w-8 h-8 object-contain"
+                      />
                    </div>
-                   <span className="font-semibold text-medical-heading block">{item}</span>
+                   <span className="font-semibold text-medical-heading block">{item.title}</span>
                 </div>
               ))}
            </div>

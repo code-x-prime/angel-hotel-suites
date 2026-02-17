@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import AnimatedButton from "@/components/ui/AnimatedButton";
 
 const navLinks = [
   { label: "Rooms", href: "#rooms" },
@@ -155,12 +156,12 @@ export default function Navbar() {
               <Phone className="w-4 h-4" />
               <span>+91 99588 00961</span>
             </a>
-            <a
+            <AnimatedButton
               href="#booking"
-              className="bg-[#E86C3D] hover:bg-orange-600 text-white px-6 py-2.5 rounded-md font-semibold text-sm transition-all duration-300 shadow-sm hover:shadow-md flex items-center gap-2 transform hover:-translate-y-0.5"
+              className="px-6 py-2.5 text-sm flex items-center gap-2"
             >
               Book Now
-            </a>
+            </AnimatedButton>
           </motion.div>
 
           {/* Mobile Toggle */}

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Send, Loader2, CheckCircle } from "lucide-react";
+import AnimatedButton from "@/components/ui/AnimatedButton";
 
 export default function BookingForm() {
   const [formData, setFormData] = useState({
@@ -143,17 +144,17 @@ export default function BookingForm() {
               </div>
             </div>
             
-            <button 
+            <AnimatedButton 
               type="submit" 
               disabled={status === "loading"}
-              className="w-full bg-medical-accent hover:bg-[#d55f32] disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold text-xl py-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 mt-4"
+              className="w-full text-xl py-5 shadow-lg hover:shadow-xl hover:-translate-y-1 mt-4 gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {status === "loading" ? (
                  <> <Loader2 className="w-6 h-6 animate-spin" /> Sending... </>
               ) : (
                  <> <Send className="w-6 h-6" /> Check Availability </>
               )}
-            </button>
+            </AnimatedButton>
             
             {status === "error" && (
                <p className="text-red-500 text-center font-bold">Failed to send. Please try again or call us.</p>

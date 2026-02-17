@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, Phone, MessageCircle, MapPin, CheckCircle } from "lucide-react";
+import { Calendar, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -60,10 +60,34 @@ export default function Hero() {
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 text-white/90 text-sm md:text-base font-medium">
-             <span className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-400" /> Peaceful Rooms</span>
-             <span className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-400" /> Lift Access</span>
-             <span className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-400" /> Long Stay Discounts</span>
-             <span className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-400" /> 24x7 Assistance</span>
+             <span className="flex items-center gap-2"><Image
+              src="/peaceful-pooms.svg"
+              alt="Peaceful Rooms"
+              width={25}
+              height={25}
+              className="invert"
+             /> Peaceful Rooms</span>
+             <span className="flex items-center gap-2"><Image
+              src="/lift-access.svg"
+              alt="Lift Access"
+              width={25}
+              height={25}
+              className="invert"
+             /> Lift Access</span>
+             <span className="flex items-center gap-2"><Image
+              src="/long-stay-discounts.svg"
+              alt="Long Stay Discounts"
+              width={25}
+              height={25}
+              className="invert"
+             /> Long Stay Discounts</span>
+             <span className="flex items-center gap-2"><Image
+              src="/24-hours-support.svg"
+              alt="24x7 Assistance"
+              width={25}
+              height={25}
+              className="invert"
+             /> 24x7 Assistance</span>
           </motion.div>
           
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">

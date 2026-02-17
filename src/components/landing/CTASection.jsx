@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Phone, Calendar } from "lucide-react";
+import AnimatedButton from "@/components/ui/AnimatedButton";
 
 export default function CTASection() {
   const fadeUp = {
@@ -32,13 +33,13 @@ export default function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-             <a 
+             <AnimatedButton 
                 href="tel:+919958800961"
-                className="w-full sm:w-auto bg-[#E86C3D] hover:bg-[#d55f32] text-white px-8 py-4 rounded-lg font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3"
+                className="w-full sm:w-auto px-8 py-4 text-lg gap-3 shadow-xl hover:shadow-2xl hover:-translate-y-1"
              >
                 <Phone className="w-5 h-5" />
                 Call Now
-             </a>
+             </AnimatedButton>
              
              <a 
                 href="#booking"
