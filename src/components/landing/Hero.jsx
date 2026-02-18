@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
+import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
 
 const heroImages = [
   "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=2000&auto=format&fit=crop",
@@ -80,10 +81,15 @@ export default function Hero() {
             Sector 38, Gurgaon – Close to Medanta & Sohna Road
           </motion.div>
 
-          <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-6 drop-shadow-lg">
-            Hotel Near Medanta <br className="hidden md:block" />
-            <span className="text-medical-accent">Just 3 Minutes Away</span>
-          </motion.h1>
+          <motion.div variants={fadeUp} className="mb-6 flex justify-center w-full">
+            <LayoutTextFlip
+              text="Hotel Near Medanta"
+              words={["Just 3 Min Away", "Premium Comfort", "Affordable Stays"]}
+              textClassName="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white drop-shadow-xl shadow-black"
+              buttonClassName="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-medical-accent drop-shadow-xl shadow-black bg-transparent p-0 m-0"
+              className="flex-col  items-center justify-center gap-x-3 gap-y-1"
+            />
+          </motion.div>
           
           <motion.p variants={fadeUp} className="text-lg md:text-2xl text-white/95 mb-8 leading-relaxed font-light max-w-3xl mx-auto">
             Comfortable, Affordable Stay for Patients & Families in Gurgaon
