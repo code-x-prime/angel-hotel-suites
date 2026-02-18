@@ -15,7 +15,7 @@ export default function MedicalPackages() {
   };
 
   return (
-    <section id="packages" className="py-24 bg-white relative overflow-hidden">
+    <section id="packages" className="py-8 md:py-12 bg-white relative overflow-hidden">
       <div className="container px-6 relative z-10">
         <motion.div
            initial="hidden"

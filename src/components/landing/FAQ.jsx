@@ -49,7 +49,7 @@ function FAQItem({ faq, index }) {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
-        "relative rounded-2xl overflow-hidden transition-shadow duration-300",
+        "relative rounded-lg overflow-hidden transition-shadow duration-300",
         isOpen
           ? "bg-white shadow-[0_8px_40px_rgba(0,0,0,0.1)]"
           : "bg-white shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-[0_6px_28px_rgba(0,0,0,0.1)]"
@@ -57,7 +57,7 @@ function FAQItem({ faq, index }) {
     >
       {/* Left accent bar */}
       <motion.div
-        className="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-2xl"
+        className="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-lg"
         style={{ background: faq.accent }}
         animate={{ scaleY: isOpen ? 1 : 0.4, opacity: isOpen ? 1 : 0.3 }}
         transition={{ duration: 0.35, ease: "easeInOut" }}
@@ -143,7 +143,7 @@ function FAQItem({ faq, index }) {
 
 export default function FAQ() {
   return (
-    <section className="relative py-24 bg-[#f8fafc] overflow-hidden">
+    <section className="relative py-8 md:py-12 bg-[#f8fafc] overflow-hidden">
 
       {/* Blobs */}
       <Blob className="w-72 h-72 bg-blue-100/40 -top-10 -left-16" delay={0} />

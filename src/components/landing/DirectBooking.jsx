@@ -68,11 +68,11 @@ function PerkCard({ item, index }) {
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.55, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-      className="relative bg-white rounded-2xl p-6 shadow-[0_2px_20px_rgba(0,0,0,0.07)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.13)] transition-shadow duration-300 cursor-default overflow-hidden flex flex-col items-center text-center"
+      className="relative bg-white rounded-lg p-6 shadow-[0_2px_20px_rgba(0,0,0,0.07)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.13)] transition-shadow duration-300 cursor-default overflow-hidden flex flex-col items-center text-center"
     >
       {/* Top accent line */}
       <motion.div
-        className="absolute top-0 left-0 right-0 h-[3px] rounded-t-2xl"
+        className="absolute top-0 left-0 right-0 h-[3px] rounded-t-lg"
         style={{ background: item.accent }}
         initial={{ scaleX: 0, originX: 0 }}
         whileInView={{ scaleX: 1 }}
@@ -82,7 +82,7 @@ function PerkCard({ item, index }) {
 
       {/* Glow */}
       <motion.div
-        className="absolute inset-0 pointer-events-none rounded-2xl"
+        className="absolute inset-0 pointer-events-none rounded-lg"
         animate={{ opacity: hovered ? 1 : 0 }}
         transition={{ duration: 0.35 }}
         style={{ background: `radial-gradient(circle at 50% 30%, ${item.accent}18 0%, transparent 70%)` }}
@@ -102,7 +102,7 @@ function PerkCard({ item, index }) {
 
       {/* Icon */}
       <motion.div
-        className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 mt-2 relative z-10"
+        className="w-14 h-14 rounded-lg flex items-center justify-center mb-5 mt-2 relative z-10"
         style={{ backgroundColor: `${item.accent}18` }}
         whileHover={{ scale: 1.12, rotate: [0, -6, 6, 0] }}
         transition={{ type: "spring", stiffness: 300 }}
@@ -139,7 +139,7 @@ function Blob({ className, delay = 0 }) {
 
 export default function DirectBooking() {
   return (
-    <section className="relative py-24 bg-[#f8fafc] overflow-hidden">
+    <section className="relative py-8 md:py-12 bg-[#f8fafc] overflow-hidden">
 
       {/* Blobs */}
       <Blob className="w-72 h-72 bg-green-100/50 -top-10 -right-16" delay={0} />

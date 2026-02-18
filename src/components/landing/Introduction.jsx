@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Introduction() {
   return (
-    <section className="py-24 bg-white text-center">
+    <section className="py-8 md:py-12 bg-white text-center">
       <div className="container px-6">
         <motion.div
            initial={{ opacity: 0, y: 30 }}
@@ -28,6 +28,31 @@ export default function Introduction() {
             If you or your loved one is visiting <strong>Medanta – The Medicity</strong>, you need more than just a room — 
             you need peace, cleanliness, and supportive hospitality.
           </p>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
+            <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg">
+               <Image 
+                 src="/Restaurant.jpg" 
+                 alt="Healthy Dining for Patients" 
+                 fill
+                 className="object-cover hover:scale-105 transition-transform duration-700"
+               />
+               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                 <p className="text-white font-bold text-lg">Hygienic & Healthy Dining</p>
+               </div>
+            </div>
+            <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg">
+               <Image 
+                 src="/Buffet.jpg" 
+                 alt="Buffet Service" 
+                 fill
+                 className="object-cover hover:scale-105 transition-transform duration-700"
+               />
+               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                 <p className="text-white font-bold text-lg">Daily Fresh Buffet</p>
+               </div>
+            </div>
+          </div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-left max-w-4xl mx-auto">
              {[

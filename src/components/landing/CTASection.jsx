@@ -15,7 +15,7 @@ export default function CTASection() {
   };
 
   return (
-    <section id="cta" className="py-24 bg-medical-primary text-white text-center">
+    <section id="cta" className="py-8 md:py-12 bg-medical-primary text-white text-center">
       <div className="container px-6">
         <motion.div
            initial="hidden"

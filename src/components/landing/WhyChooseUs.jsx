@@ -137,7 +137,7 @@ function Blob({ className, delay = 0 }) {
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" className="relative py-24 bg-[#f8fafc] border-t border-slate-100 overflow-hidden">
+    <section id="why-us" className="relative py-8 md:py-12 bg-[#f8fafc] border-t border-slate-100 overflow-hidden">
 
       {/* Background decoration */}
       <Blob className="w-72 h-72 bg-blue-100/60 -top-10 -left-16" delay={0} />

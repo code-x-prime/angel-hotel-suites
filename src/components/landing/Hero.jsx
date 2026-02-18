@@ -7,10 +7,7 @@ import Image from "next/image";
 import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
 
 const heroImages = [
-  "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2000&auto=format&fit=crop"
+  "/Suite-2.jpg"
 ];
 
 export default function Hero() {
@@ -65,7 +62,7 @@ export default function Hero() {
         </AnimatePresence>
         
         {/* Overlays - these sit on top of the images but behind text */}
-        <div className="absolute inset-0 bg-medical-dark/30 z-10" />
+        <div className="absolute inset-0 bg-medical-dark/10 z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-medical-dark/50 via-transparent to-medical-dark/20 z-10" />
       </div>
 

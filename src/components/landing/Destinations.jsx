@@ -36,7 +36,7 @@ const destinations = [
 
 export default function Destinations() {
   return (
-    <section id="destinations" className="py-16 md:py-24 bg-medical-alt relative overflow-hidden">
+    <section id="destinations" className="py-8 md:py-12 bg-medical-alt relative overflow-hidden">
       <div className="container-custom">
         <motion.div
            initial={{ opacity: 0, y: 30 }}

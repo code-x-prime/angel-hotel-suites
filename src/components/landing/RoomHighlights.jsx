@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 
 const rooms = [
   {
-    image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=800&auto=format&fit=crop",
+    image: "/Deluxe Room-1.jpg",
     title: "Classic Patient Room",
     desc: "Designed for recovery. Peaceful, hygienic, and equipped with all medical-stay essentials.",
     icon: Wind,
@@ -15,16 +15,16 @@ const rooms = [
     tag: "Most Popular",
   },
   {
-    image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=800&auto=format&fit=crop",
-    title: "Twin Staying Room",
+    image: "/Deluxe Room-2.jpg",
+    title: "Double Occupancy",
     desc: "Perfect for a patient and an attendant. Includes two comfortable beds and ample space.",
     icon: Users,
     accent: "#22c98a",
     tag: "Family Friendly",
   },
   {
-    image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=800&auto=format&fit=crop",
-    title: "Premium Suite",
+    image: "/Family Suite-1.jpg",
+    title: "Family Suite",
     desc: "Extra spacious for long-term stays. Features a small seating area and premium amenities.",
     icon: Star,
     accent: "#f59e42",
@@ -75,11 +75,11 @@ function RoomCard({ room, index }) {
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
-      className="relative bg-white rounded-2xl overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.07)] hover:shadow-[0_12px_48px_rgba(0,0,0,0.14)] transition-shadow duration-400 cursor-default group"
+      className="relative bg-white rounded-lg overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.07)] hover:shadow-[0_12px_48px_rgba(0,0,0,0.14)] transition-shadow duration-400 cursor-default group"
     >
       {/* Top accent line */}
       <motion.div
-        className="absolute top-0 left-0 right-0 h-[3px] z-20 rounded-t-2xl"
+        className="absolute top-0 left-0 right-0 h-[3px] z-20 rounded-t-lg"
         style={{ background: room.accent }}
         initial={{ scaleX: 0, originX: 0 }}
         whileInView={{ scaleX: 1 }}

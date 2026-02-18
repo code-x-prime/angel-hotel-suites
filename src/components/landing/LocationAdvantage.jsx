@@ -43,7 +43,7 @@ export default function LocationAdvantage() {
   ];
 
   return (
-    <section id="location" className="py-24 bg-[#EAF3F6]">
+    <section id="location" className="py-8 md:py-12 bg-[#EAF3F6]">
       <div className="container px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           

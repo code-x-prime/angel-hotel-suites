@@ -101,11 +101,11 @@ function TestimonialCard({ review, index }) {
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, delay: index * 0.13, ease: [0.22, 1, 0.36, 1] }}
-      className="relative bg-white rounded-2xl p-7 shadow-[0_2px_20px_rgba(0,0,0,0.07)] hover:shadow-[0_12px_48px_rgba(0,0,0,0.13)] transition-shadow duration-400 cursor-default overflow-hidden flex flex-col"
+      className="relative bg-white rounded-lg p-7 shadow-[0_2px_20px_rgba(0,0,0,0.07)] hover:shadow-[0_12px_48px_rgba(0,0,0,0.13)] transition-shadow duration-400 cursor-default overflow-hidden flex flex-col"
     >
       {/* Top accent line */}
       <motion.div
-        className="absolute top-0 left-0 right-0 h-[3px] rounded-t-2xl"
+        className="absolute top-0 left-0 right-0 h-[3px] rounded-t-lg"
         style={{ background: review.accent }}
         initial={{ scaleX: 0, originX: 0 }}
         whileInView={{ scaleX: 1 }}
@@ -115,7 +115,7 @@ function TestimonialCard({ review, index }) {
 
       {/* Radial glow */}
       <motion.div
-        className="absolute inset-0 pointer-events-none rounded-2xl"
+        className="absolute inset-0 pointer-events-none rounded-lg"
         animate={{ opacity: hovered ? 1 : 0 }}
         transition={{ duration: 0.35 }}
         style={{ background: `radial-gradient(circle at 15% 85%, ${review.accent}15 0%, transparent 65%)` }}
@@ -207,7 +207,7 @@ function Blob({ className, delay = 0 }) {
 
 export default function Testimonials() {
   return (
-    <section id="reviews" className="relative py-24 bg-white overflow-hidden">
+    <section id="reviews" className="relative py-8 md:py-12 bg-white overflow-hidden">
 
       {/* Blobs */}
       <Blob className="w-72 h-72 bg-yellow-100/40 -top-10 -left-16" delay={0} />
