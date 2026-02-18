@@ -62,14 +62,14 @@ export default function MedicalPackages() {
 
            <div className="flex flex-col sm:flex-row gap-4 justify-center">
              <a 
-               href="tel:+918448295915" 
+               href="tel:+919205601379" 
                className="bg-medical-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-medical-dark transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
              >
                <Phone className="w-5 h-5" />
                Call for Rates
              </a>
              <a 
-               href="https://wa.me/918448295915" 
+               href="https://wa.me/919205601379" 
                target="_blank"
                rel="noopener noreferrer"
                className="bg-[#25D366] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#20bd5a] transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5"

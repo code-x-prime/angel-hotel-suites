@@ -226,7 +226,7 @@ export default function DirectBooking() {
 
             <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
               <a
-                href="https://wa.me/918448295915"
+                href="https://wa.me/919205601379"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white text-sm font-semibold shadow-lg shadow-green-100 hover:shadow-green-200 transition-all duration-300 hover:-translate-y-0.5"
@@ -241,7 +241,7 @@ export default function DirectBooking() {
                 >→</motion.span>
               </a>
               <a
-                href="tel:+918448295915"
+                href="tel:+919205601379"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5"
               >
                 📞 Call Now

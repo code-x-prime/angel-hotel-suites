@@ -75,7 +75,7 @@ export async function POST(req) {
             <p>We have received your request for a stay from <strong>${checkIn}</strong> to <strong>${checkOut}</strong>.</p>
             <p>Our team will check availability and call you shortly at <strong>${phone}</strong> to confirm the best rates.</p>
             <br />
-            <p>For urgent queries, call us directly at <strong>+91-8448295915</strong>.</p>
+            <p>For urgent queries, call us directly at <strong>+91-9205601379</strong>.</p>
             <br />
             <p>Warm Regards,<br/>Angel Hotel Team</p>
           </div>

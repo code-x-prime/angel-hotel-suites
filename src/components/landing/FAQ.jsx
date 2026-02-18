@@ -229,7 +229,7 @@ export default function FAQ() {
           </div>
           <div className="flex gap-3 flex-shrink-0">
             <a
-              href="https://wa.me/918448295915"
+              href="https://wa.me/919205601379"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-green-500 hover:bg-green-600 text-white text-xs font-semibold shadow-md shadow-green-100 transition-all duration-300 hover:-translate-y-0.5"
@@ -240,7 +240,7 @@ export default function FAQ() {
               WhatsApp
             </a>
             <a
-              href="tel:+918448295915"
+              href="tel:+919205601379"
               className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold transition-all duration-300 hover:-translate-y-0.5"
             >
               📞 Call Us
