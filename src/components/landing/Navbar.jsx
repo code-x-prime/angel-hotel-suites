@@ -154,7 +154,7 @@ export default function Navbar() {
               )}
             >
               <Phone className="w-4 h-4" />
-              <span>+91 84482 95915</span>
+              <span>+91 92056 01379</span>
             </a>
             <AnimatedButton
               href="#booking"

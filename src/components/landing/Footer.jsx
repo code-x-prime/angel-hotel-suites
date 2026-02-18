@@ -83,7 +83,7 @@ export default function Footer() {
                     <div>
                         <span className="block text-xs text-slate-500 uppercase font-bold tracking-wider mb-1">Call Us 24/7</span>
                         <a href="tel:+919205601379" className="text-base text-white hover:text-medical-accent transition-colors font-semibold">
-                            +91 84482 95915
+                            +91 92056 01379
                         </a>
                     </div>
                 </li>
