@@ -62,7 +62,7 @@ export default function Hero() {
         </AnimatePresence>
         
         {/* Overlays - these sit on top of the images but behind text */}
-        <div className="absolute inset-0 bg-medical-dark/10 z-10" />
+        <div className="absolute inset-0 bg-medical-dark/20 z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-medical-dark/50 via-transparent to-medical-dark/20 z-10" />
       </div>
 
