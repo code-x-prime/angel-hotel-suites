@@ -3,7 +3,6 @@ import Hero from "@/components/landing/Hero";
 import Introduction from "@/components/landing/Introduction";
 import WhyChooseUs from "@/components/landing/WhyChooseUs";
 import RoomHighlights from "@/components/landing/RoomHighlights";
-import MedicalPackages from "@/components/landing/MedicalPackages";
 import LocationAdvantage from "@/components/landing/LocationAdvantage";
 import Testimonials from "@/components/landing/Testimonials";
 import DirectBooking from "@/components/landing/DirectBooking";
@@ -22,7 +21,6 @@ export default function Home() {
       <Introduction />
       <WhyChooseUs />
       <RoomHighlights />
-      <MedicalPackages />
       <LocationAdvantage />
       <Testimonials />
       <DirectBooking />

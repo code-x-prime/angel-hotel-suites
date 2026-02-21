@@ -83,7 +83,7 @@ export default function Location() {
              className="grid gap-6"
            >
               {[
-                  { icon: Navigation, title: "3 Mins to Medanta", desc: "Just 600 meters away. Walking distance for attendants." },
+                  { icon: Navigation, title: "5 mins to Medanta", desc: "Just 600 meters away. Walking distance for attendants." },
                   { icon: Building2, title: "Close to Sohna Road", desc: "Easy access to business hubs and corporate offices." },
                   { icon: Navigation, title: "HUDA City Centre", desc: "10 mins drive to the main metro station connecting Delhi." },
                   { icon: Utensils, title: "Restaurants & Market", desc: "Pharmacy, grocery, and food options within 200 meters." }

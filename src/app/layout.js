@@ -12,12 +12,12 @@ const inter = Inter({
 
 export const metadata = {
   title: "Hotel Near Medanta – The Angel Hotel & Suites | Sector 38 Gurgaon",
-  description: "Looking for a hotel near Medanta? The Angel Hotel & Suites offers comfortable, affordable medical stay just 3 minutes from Medanta – The Medicity in Sector 38, Gurgaon. Ideal for patients and families.",
+  description: "Looking for a hotel near Medanta? The Angel Hotel & Suites offers comfortable, affordable medical stay just 5 minutes from Medanta – The Medicity in Sector 38, Gurgaon. Ideal for patients and families.",
   metadataBase: new URL("https://panacea-medcare-landing.vercel.app/"),
   keywords: "hotel near Medanta, medical stay Gurgaon, long stay near Medanta, Sector 38 hotel, budget hotel near Medanta",
   authors: [{ name: "The Angel Hotel & Suites" }],
   openGraph: {
-    title: "Hotel Near Medanta – Just 3 Minutes Away",
+    title: "Hotel Near Medanta – Just 5 minutes Away",
     description: "Comfortable medical stay for patients & families near Medanta Hospital",
     type: "website",
     locale: "en_IN",
@@ -34,7 +34,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hotel Near Medanta – Just 3 Minutes Away",
+    title: "Hotel Near Medanta – Just 5 minutes Away",
     description: "Comfortable medical stay for patients & families near Medanta Hospital",
     images: ["/og-image.jpg"],
   },

@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const faqs = [
   {
     question: "How close is the hotel to Medanta Hospital?",
-    answer: "We are extremely close — just 600 meters away. It takes about 3 minutes to walk, or you can take a quick rickshaw ride.",
+    answer: "We are extremely close — just 600 meters away. It takes about 5 minutes to walk, or you can take a quick rickshaw ride.",
     accent: "#4f8ef7",
   },
   {

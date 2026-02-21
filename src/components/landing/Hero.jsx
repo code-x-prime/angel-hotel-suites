@@ -81,7 +81,7 @@ export default function Hero() {
           <motion.div variants={fadeUp} className="mb-6 flex justify-center w-full">
             <LayoutTextFlip
               text="Hotel Near Medanta"
-              words={["Just 3 Min Away", "Premium Comfort", "Affordable Stays"]}
+              words={["Just 5 min Away", "Premium Comfort", "Affordable Stays"]}
               textClassName="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white drop-shadow-xl shadow-black"
               buttonClassName="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-medical-accent drop-shadow-xl shadow-black bg-transparent p-0 m-0"
               className="flex-col  items-center justify-center gap-x-3 gap-y-1"

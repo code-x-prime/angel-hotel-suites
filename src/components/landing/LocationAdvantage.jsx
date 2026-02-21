@@ -22,8 +22,8 @@ export default function LocationAdvantage() {
   const locationFeatures = [
     { 
       icon: MapPin, 
-      title: "3 Minutes to Medanta", 
-      desc: "Walking distance or a quick rickshaw ride." 
+      title: "5 minutes to Medanta", 
+      desc: "Walking distance or a quick auto ride." 
     },
     { 
       icon: Building2, 
@@ -33,12 +33,12 @@ export default function LocationAdvantage() {
     { 
       icon: Navigation, 
       title: "Easy Access to HUDA City Centre", 
-      desc: "Connected to Delhi Metro (Yellow Line)." 
+      desc: "Connected to 3 Metro Station (Yellow Line)." 
     },
     { 
       icon: Utensils, 
       title: "Nearby Restaurants & Pharmacy", 
-      desc: "Everything you need is just a few steps away." 
+      desc: "Only 3KM from Medanta Cybercity" 
     }
   ];
 
@@ -64,7 +64,7 @@ export default function LocationAdvantage() {
                 <span className="text-slate-500 text-2xl md:text-4xl">Connected & Convenient</span>
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed max-w-lg">
-                Located in a safe, quiet neighborhood just steps away from Medanta The Medicity. 
+                Located in a safe, quiet neighborhood – just 700 meters from Medanta The Medicity. 
                 Perfect for patients needing quick hospital access.
               </p>
             </div>
@@ -89,7 +89,7 @@ export default function LocationAdvantage() {
 
             <motion.div variants={item} className="mt-4">
               <a 
-                href="https://maps.google.com/?q=Medanta+The+Medicity" 
+                href="https://maps.app.goo.gl/CJqbtra2atNX2yhh9" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-medical-primary font-bold hover:text-medical-dark transition-colors group"
@@ -109,7 +109,7 @@ export default function LocationAdvantage() {
             className="h-[500px] w-full rounded-lg overflow-hidden shadow-lg border border-white/50 relative bg-slate-200"
           >
              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.816867272767!2d77.0401!3d28.4245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d196414777271%3A0x6924847248364e52!2sMedanta%20-%20The%20Medicity!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7016.958360150675!2d77.03511694328186!3d28.434968203092275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d186ec89f751b%3A0xdc2ab32fc4675cac!2sMedanta%20-%20The%20Medicity%2C%20Gurugram!5e0!3m2!1sen!2sin!4v1771668971969!5m2!1sen!2sin" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 

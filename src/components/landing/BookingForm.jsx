@@ -12,7 +12,7 @@ export default function BookingForm() {
     checkIn: "",
     checkOut: ""
   });
-  const [status, setStatus] = useState("idle"); // idle, loading, success, error
+  const [status, setStatus] = useState("idle");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -152,7 +152,7 @@ export default function BookingForm() {
               {status === "loading" ? (
                  <> <Loader2 className="w-6 h-6 animate-spin" /> Sending... </>
               ) : (
-                 <> <Send className="w-6 h-6" /> Check Availability </>
+                 <> <Send className="w-6 h-6" /> Book Now </>
               )}
             </AnimatedButton>
             
@@ -162,7 +162,7 @@ export default function BookingForm() {
          </form>
        )}
        
-       <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-center gap-2 text-xs text-slate-500 font-medium">
+       <div className="mt-5 pt-6 border-t border-slate-100 flex items-center justify-center gap-2 text-xs text-slate-500 font-medium">
          <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
          Usually responds within 10 minutes
        </div>

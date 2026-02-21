@@ -6,32 +6,113 @@ import { useRef, useState, useEffect } from "react";
 
 const testimonials = [
   {
-    name: "Rajesh Kumar",
-    initials: "RK",
-    text: "Very comfortable stay during my father's treatment at Medanta. Staff was very supportive and understanding of our situation.",
+    name: "Kirti V",
+    initials: "KV",
+    text: "Excellent Medical facilities and services. Maintained cleanliness and is very hygienic. Good infrastructure with proper ventilation. Dr. Pooja Mittal & Dr. T J Antony are such good and caring doctors.",
     rating: 5,
     accent: "#4f8ef7",
-    stay: "7 Night Stay",
-    date: "Jan 2025",
+    stay: "Patient Family",
+    date: "1 week ago",
   },
   {
-    name: "Sarah Jenkins",
-    initials: "SJ",
-    text: "Clean rooms and very close to hospital. Highly recommended for medical visits. The location saved us so much time.",
+    name: "Richa Rashmi",
+    initials: "RR",
+    text: "I had the best of care and experience. The doctors and nurses are very friendly and absolutely loving. The surgery was complicated but experienced hands made sure I was treated well.",
     rating: 5,
     accent: "#22c98a",
-    stay: "3 Night Stay",
-    date: "Dec 2024",
+    stay: "Medical Stay",
+    date: "2 months ago",
   },
   {
-    name: "Amit Singh",
-    initials: "AS",
-    text: "Affordable and peaceful compared to other hotels nearby. Felt like home during a very difficult time for our family.",
+    name: "Joseline Muteesi",
+    initials: "JM",
+    text: "Extending sincere gratitude to the outstanding care. Especially Mr. Suraj in the Pharmacy whose kindness and excellent communication made a significant difference. Truly impressed.",
     rating: 5,
     accent: "#f59e42",
-    stay: "14 Night Stay",
-    date: "Feb 2025",
+    stay: "International Patient",
+    date: "4 months ago",
   },
+  {
+    name: "Rahul Das",
+    initials: "RD",
+    text: "One of the best hospitals in India with advance technology. Located conveniently in Gurgaon Sector 38. Professional environment and smooth coordination across departments.",
+    rating: 5,
+    accent: "#9333ea",
+    stay: "Local Guide",
+    date: "2 weeks ago",
+  },
+  {
+    name: "Disha Gupta",
+    initials: "DG",
+    text: "Doctors explained the RFA procedure clearly which gave us confidence. Extremely supportive nursing team. admission to post-procedure care was well-managed and organized.",
+    rating: 5,
+    accent: "#06b6d4",
+    stay: "Family Stay",
+    date: "4 weeks ago",
+  },
+  {
+    name: "Sanjeev Dhawan",
+    initials: "SD",
+    text: "Knowledgeable doctors and attentive nursing staff. Cleanliness and hygiene were well maintained. High-quality medical care with a human touch. Highly recommend for any treatment.",
+    rating: 5,
+    accent: "#ec4899",
+    stay: "Verified Guest",
+    date: "1 month ago",
+  },
+  {
+    name: "Dr. Darshan Parida",
+    initials: "DP",
+    text: "Modern infrastructure that puts you at ease. The ENT surgery went precisely as explained. The nursing staff were incredibly helpful and genuinely caring throughout our stay.",
+    rating: 5,
+    accent: "#f97316",
+    stay: "Doctor Guest",
+    date: "1 month ago",
+  },
+  {
+    name: "Sangay Zam",
+    initials: "SZ",
+    text: "Kind and helpful staff. Excellent care from the robotic physiotherapy and speech therapy teams. My son felt much better and stronger. Friendly and supportive environment.",
+    rating: 5,
+    accent: "#14b8a6",
+    stay: "Family Stay",
+    date: "1 month ago",
+  },
+  {
+    name: "Piyush Singh",
+    initials: "PS",
+    text: "Thorough professional doctors (Dr Preeti) for our child's delivery. Competent and attentive nursing staff. Clean facilities and helpful floor managers.",
+    rating: 5,
+    accent: "#6366f1",
+    stay: "First Time Parent",
+    date: "3 months ago",
+  },
+  {
+    name: "Karn Singh",
+    initials: "KS",
+    text: "Getting treatment from the Cancer Institute for 6 months. Team and doctors are very cooperative and professional. Nursing staff (Anil & Dimple) is superb. Recovering well.",
+    rating: 5,
+    accent: "#ef4444",
+    stay: "Long Term Patient",
+    date: "1 month ago",
+  },
+  {
+    name: "Pradeep Nath",
+    initials: "PN",
+    text: "Extraordinary patient care by outstanding doctors (Dr Adarsh Chaudhary). The inpatient care is personal and reassuring. Special thanks to the ever-smiling nursing team.",
+    rating: 5,
+    accent: "#3b82f6",
+    stay: "Medical Stay",
+    date: "1 month ago",
+  },
+  {
+    name: "Choco Choczy",
+    initials: "CC",
+    text: "Great services after my C-section. Nursing staff (Kabool, Kirti, Sayani) and GDA team were always there for help. Floor incharge took regular updates. Grateful for the care.",
+    rating: 5,
+    accent: "#fbbf24",
+    stay: "Patient Family",
+    date: "3 months ago",
+  }
 ];
 
 /* ── Animated Count Up ── */
@@ -68,131 +149,85 @@ function CountUp({ to, suffix = "" }) {
   );
 }
 
-/* ── Tilt Card ── */
-function TestimonialCard({ review, index }) {
-  const ref = useRef(null);
-  const [hovered, setHovered] = useState(false);
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const springX = useSpring(x, { stiffness: 180, damping: 22 });
-  const springY = useSpring(y, { stiffness: 180, damping: 22 });
-  const rotateX = useTransform(springY, [-0.5, 0.5], [5, -5]);
-  const rotateY = useTransform(springX, [-0.5, 0.5], [-5, 5]);
-
-  function onMouseMove(e) {
-    const rect = ref.current.getBoundingClientRect();
-    x.set((e.clientX - rect.left) / rect.width - 0.5);
-    y.set((e.clientY - rect.top) / rect.height - 0.5);
-  }
-  function onMouseLeave() {
-    x.set(0);
-    y.set(0);
-    setHovered(false);
-  }
-
+function TestimonialCard({ review }) {
   return (
-    <motion.div
-      ref={ref}
-      onMouseMove={onMouseMove}
-      onMouseLeave={onMouseLeave}
-      onMouseEnter={() => setHovered(true)}
-      style={{ rotateX, rotateY, transformStyle: "preserve-3d", perspective: 900 }}
-      initial={{ opacity: 0, y: 50, scale: 0.93 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, delay: index * 0.13, ease: [0.22, 1, 0.36, 1] }}
-      className="relative bg-white rounded-lg p-7 shadow-[0_2px_20px_rgba(0,0,0,0.07)] hover:shadow-[0_12px_48px_rgba(0,0,0,0.13)] transition-shadow duration-400 cursor-default overflow-hidden flex flex-col"
-    >
-      {/* Top accent line */}
-      <motion.div
-        className="absolute top-0 left-0 right-0 h-[3px] rounded-t-lg"
-        style={{ background: review.accent }}
-        initial={{ scaleX: 0, originX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7, delay: index * 0.13 + 0.35, ease: "easeOut" }}
-      />
-
-      {/* Radial glow */}
-      <motion.div
-        className="absolute inset-0 pointer-events-none rounded-lg"
-        animate={{ opacity: hovered ? 1 : 0 }}
-        transition={{ duration: 0.35 }}
-        style={{ background: `radial-gradient(circle at 15% 85%, ${review.accent}15 0%, transparent 65%)` }}
-      />
-
-      {/* Quote icon */}
-      <motion.div
-        className="absolute top-5 right-5"
-        initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
-        whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: index * 0.13 + 0.4, type: "spring" }}
+    <div className="flex-shrink-0 w-[350px] md:w-[450px] h-[220px] mx-4 transition-transform duration-300 hover:scale-[1.02]">
+      <div 
+        className="relative h-full rounded-3xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border flex flex-col justify-between group transition-all duration-300 backdrop-blur-sm"
+        style={{ 
+          backgroundColor: `${review.accent}08`,
+          borderColor: `${review.accent}15`,
+        }}
       >
-        <Quote
-          className="w-9 h-9"
-          style={{ color: review.accent, opacity: 0.18 }}
-          fill="currentColor"
+        {/* Decorative elements */}
+        <div 
+          className="absolute -top-px -left-px w-12 h-12 rounded-tl-3xl border-t-2 border-l-2 opacity-40 group-hover:opacity-100 transition-opacity"
+          style={{ borderColor: review.accent }}
         />
-      </motion.div>
+        
+        <div className="relative z-10">
+          <div className="flex gap-0.5 mb-4">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />
+            ))}
+          </div>
+          <p className="text-slate-700 text-sm leading-relaxed font-medium italic line-clamp-3">
+            &quot;{review.text}&quot;
+          </p>
+        </div>
 
-      {/* Stars */}
-      <motion.div
-        className="flex gap-1 mb-5 relative z-10"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={{ visible: { transition: { staggerChildren: 0.08, delayChildren: index * 0.13 + 0.2 } } }}
-      >
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            variants={{
-              hidden: { opacity: 0, scale: 0, rotate: -30 },
-              visible: { opacity: 1, scale: 1, rotate: 0, transition: { type: "spring", stiffness: 300 } },
-            }}
+        <div className="relative z-10 flex items-center gap-3 pt-4 border-t mt-auto" style={{ borderTopColor: `${review.accent}10` }}>
+          <div 
+            className="w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-md flex-shrink-0"
+            style={{ backgroundColor: review.accent }}
           >
-            <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-          </motion.div>
-        ))}
-      </motion.div>
-
-      {/* Review text */}
-      <p className="text-slate-600 leading-relaxed mb-6 flex-1 text-sm relative z-10 italic">
-        &quot;{review.text}&quot;
-      </p>
-
-      {/* Author row */}
-      <div className="flex items-center gap-3 pt-4 border-t border-slate-100 relative z-10">
-        {/* Avatar */}
-        <div
-          className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
-          style={{ backgroundColor: review.accent }}
-        >
-          {review.initials}
+            {review.initials}
+          </div>
+          <div className="min-w-0">
+            <h4 className="font-bold text-slate-900 text-sm truncate">{review.name}</h4>
+            <span className="text-[10px] text-slate-500 font-semibold block truncate uppercase tracking-wider">{review.stay}</span>
+          </div>
+          <div className="ml-auto">
+             <span 
+              className="text-[10px] font-bold px-3 py-1 rounded-full border shadow-sm"
+              style={{ 
+                backgroundColor: `${review.accent}10`, 
+                color: review.accent,
+                borderColor: `${review.accent}20`
+              }}
+            >
+              Verified Stay
+            </span>
+          </div>
         </div>
-        <div className="flex-1 min-w-0">
-          <h4 className="font-bold text-slate-800 text-sm">{review.name}</h4>
-          <span className="text-xs text-slate-400 font-medium">{review.stay} · {review.date}</span>
-        </div>
-        <span
-          className="text-xs font-semibold px-2.5 py-1 rounded-full flex-shrink-0"
-          style={{ backgroundColor: `${review.accent}15`, color: review.accent }}
-        >
-          Verified
-        </span>
       </div>
-
-      {/* Corner number */}
-      <div
-        className="absolute bottom-4 right-5 text-5xl font-black opacity-[0.04] select-none pointer-events-none"
-        style={{ color: review.accent }}
-      >
-        {String(index + 1).padStart(2, "0")}
-      </div>
-    </motion.div>
+    </div>
   );
 }
+
+const MarqueeRow = ({ items, direction = 1, speed = 40 }) => {
+  return (
+    <div className="relative overflow-hidden flex py-4">
+      <motion.div 
+        className="flex"
+        animate={{ 
+          x: direction > 0 ? [0, -1800] : [-1800, 0] 
+        }}
+        transition={{ 
+          duration: speed, 
+          repeat: Infinity, 
+          ease: "linear",
+          repeatType: "loop"
+        }}
+        style={{ width: "max-content" }}
+      >
+        {[...items, ...items, ...items, ...items].map((review, i) => (
+          <TestimonialCard key={i} review={review} />
+        ))}
+      </motion.div>
+    </div>
+  );
+};
 
 /* ── Floating blobs ── */
 function Blob({ className, delay = 0 }) {
@@ -208,6 +243,66 @@ function Blob({ className, delay = 0 }) {
 export default function Testimonials() {
   return (
     <section id="reviews" className="relative py-8 md:py-12 bg-white overflow-hidden">
+
+          {/* Google Rating Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10"
+        >
+          {/* Rating pill */}
+          <div className="flex items-center gap-4 bg-white border border-slate-200 rounded-2xl px-6 py-4 shadow-md">
+            {/* Google color dots */}
+            <div className="flex gap-1">
+              {["#4285F4", "#EA4335", "#FBBC05", "#34A853"].map((c, i) => (
+                <motion.div
+                  key={i}
+                  className="w-2 h-2 rounded-full"
+                  style={{ backgroundColor: c }}
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ type: "spring", stiffness: 300, delay: 0.4 + i * 0.07 }}
+                />
+              ))}
+            </div>
+
+            <div className="flex items-baseline gap-1">
+              <span className="text-2xl font-extrabold text-slate-900">
+                <CountUp to={4.7} suffix="" />
+              </span>
+              <span className="text-slate-400 text-sm font-medium">/5</span>
+            </div>
+
+            <div className="flex gap-0.5">
+              {[...Array(5)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5 + i * 0.06, type: "spring" }}
+                >
+                  <Star
+                    className="w-4 h-4"
+                    style={{ color: i < 4 ? "#FBBC05" : "#FBBC05", fill: i < 4 ? "#FBBC05" : "#FBBC0555" }}
+                  />
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="border-l border-slate-100 pl-4">
+              <div className="font-bold text-slate-800 text-sm">
+                <CountUp to={600} suffix="+" />
+              </div>
+              <div className="text-xs text-slate-400">Google Reviews</div>
+            </div>
+          </div>
+
+    
+        </motion.div>
 
       {/* Blobs */}
       <Blob className="w-72 h-72 bg-yellow-100/40 -top-10 -left-16" delay={0} />
@@ -268,72 +363,17 @@ export default function Testimonials() {
           </motion.p>
         </motion.div>
 
-        {/* Cards Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
-          {testimonials.map((review, index) => (
-            <TestimonialCard key={index} review={review} index={index} />
-          ))}
+            {/* Infinite Carousel Rows */}
+        <div className="relative">
+          {/* Gradient Overlays for Fade Effect */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none" />
+          
+          <MarqueeRow items={testimonials.slice(0, 6)} direction={1} />
+          <MarqueeRow items={testimonials.slice(6, 12)} direction={-1} />
         </div>
 
-        {/* Google Rating Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6"
-        >
-          {/* Rating pill */}
-          <div className="flex items-center gap-4 bg-white border border-slate-200 rounded-2xl px-6 py-4 shadow-md">
-            {/* Google color dots */}
-            <div className="flex gap-1">
-              {["#4285F4", "#EA4335", "#FBBC05", "#34A853"].map((c, i) => (
-                <motion.div
-                  key={i}
-                  className="w-2 h-2 rounded-full"
-                  style={{ backgroundColor: c }}
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ type: "spring", stiffness: 300, delay: 0.4 + i * 0.07 }}
-                />
-              ))}
-            </div>
-
-            <div className="flex items-baseline gap-1">
-              <span className="text-2xl font-extrabold text-slate-900">
-                <CountUp to={4.5} suffix="" />
-              </span>
-              <span className="text-slate-400 text-sm font-medium">/5</span>
-            </div>
-
-            <div className="flex gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 + i * 0.06, type: "spring" }}
-                >
-                  <Star
-                    className="w-4 h-4"
-                    style={{ color: i < 4 ? "#FBBC05" : "#FBBC05", fill: i < 4 ? "#FBBC05" : "#FBBC0555" }}
-                  />
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="border-l border-slate-100 pl-4">
-              <div className="font-bold text-slate-800 text-sm">
-                <CountUp to={500} suffix="+" />
-              </div>
-              <div className="text-xs text-slate-400">Google Reviews</div>
-            </div>
-          </div>
-
     
-        </motion.div>
 
       </div>
     </section>

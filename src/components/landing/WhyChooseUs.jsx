@@ -7,7 +7,7 @@ import { useRef } from "react";
 const features = [
   {
     icon: "/families/three-Minutes.svg",
-    title: "Only 3 Minutes from Medanta",
+    title: "Only 5 minutes from Medanta",
     desc: "No long travel after hospital visits. Walking distance.",
     accent: "#4f8ef7"
   },

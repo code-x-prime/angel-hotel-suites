@@ -6,6 +6,7 @@ import { Menu, X, Phone, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import AnimatedButton from "@/components/ui/AnimatedButton";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Rooms", href: "#rooms" },
@@ -58,34 +59,12 @@ export default function Navbar() {
         <div className="w-full px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group z-50 relative">
-            <div
-              className={cn(
-                "w-10 h-10 rounded-md flex items-center justify-center font-bold text-lg transition-colors duration-300",
-                scrolled
-                  ? "bg-medical-primary text-white"
-                  : "bg-white text-medical-primary"
-              )}
-            >
-              A
-            </div>
-            <div className="flex flex-col leading-none">
-              <span
-                className={cn(
-                  "text-xl font-bold tracking-tight transition-colors duration-300",
-                  scrolled ? "text-medical-heading" : "text-white"
-                )}
-              >
-                Angel Hotel
-              </span>
-              <span
-                className={cn(
-                  "text-[10px] font-semibold tracking-widest uppercase transition-colors duration-300",
-                  scrolled ? "text-medical-text" : "text-white/80"
-                )}
-              >
-                & Suites
-              </span>
-            </div>
+            <Image src="/logo.png" width={180} height={180} alt="Angel Hotel Logo"
+
+              className={
+                scrolled ? " h-auto transition-all duration-300 group-hover:scale-105 "
+                  : " h-auto transition-all duration-300 group-hover:scale-105 bg-white/90 rounded-md p-1"
+              } />
           </Link>
 
           {/* Desktop Nav */}
@@ -157,7 +136,7 @@ export default function Navbar() {
               <span>+91 92056 01379</span>
             </a>
             <AnimatedButton
-              href="#booking"
+              href="https://wa.me/919205601379"
               className="px-6 py-2.5 text-sm flex items-center gap-2"
             >
               Book Now
@@ -237,7 +216,8 @@ export default function Navbar() {
                   Call Now
                 </a>
                 <a
-                  href="#booking"
+                  href="https://wa.me/919205601379"
+                  target="_blank"
                   className="w-full py-3 rounded-md bg-[#E86C3D] hover:bg-orange-600 text-white font-semibold text-center shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
                   onClick={() => setMobileOpen(false)}
                 >

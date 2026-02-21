@@ -1,6 +1,8 @@
 "use client";
 
 import { Facebook, Instagram, Linkedin, MapPin, Phone, Mail, ArrowRight, Star } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -10,15 +12,8 @@ export default function Footer() {
           
           {/* Column 1: Brand & About (Span 4) */}
           <div className="lg:col-span-4 space-y-8">
-             <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-medical-primary to-medical-dark flex items-center justify-center text-white font-bold text-2xl shadow-lg border border-white/10">
-                  A
-                </div>
-                <div className="flex flex-col leading-none">
-                  <span className="text-2xl font-bold text-white tracking-tight">Angel Hotel</span>
-                  <span className="text-xs font-bold tracking-[0.2em] text-medical-accent uppercase">& Suites</span>
-                </div>
-             </div>
+             <Link href={"/"}>
+             <Image src="/logo.png" alt="Logo" width={200} height={200} /></Link>
              <p className="text-slate-300 leading-relaxed text-sm max-w-sm font-light">
                Gurgaon&apos;s most trusted budget stay for medical travelers. 
                Dedicated to providing a peaceful, hygienic, and supportive environment for guests visiting Medanta - The Medicity.
@@ -70,7 +65,7 @@ export default function Footer() {
                     <div>
                         <span className="block text-xs text-slate-500 uppercase font-bold tracking-wider mb-1">Visit Us</span>
                         <p className="text-sm text-slate-300 leading-relaxed">
-                            Plot 123, Sector 38,<br />
+                            Plot 996, Sector 38,<br />
                             Near Medanta The Medicity,<br />
                             Gurgaon, Haryana 122001
                         </p>
@@ -98,7 +93,7 @@ export default function Footer() {
             </h4>
             <div className="bg-white/5 p-1 rounded-xl border border-white/10 shadow-inner">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.816867272767!2d77.0401!3d28.4245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d196414777271%3A0x6924847248364e52!2sMedanta%20-%20The%20Medicity!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7016.958360355739!2d77.0351169!3d28.4349682!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d186ec89f751b%3A0xdc2ab32fc4675cac!2sMedanta%20-%20The%20Medicity%2C%20Gurugram!5e0!3m2!1sen!2sin!4v1771671702800!5m2!1sen!2sin" 
                     width="100%" 
                     height="180" 
                     style={{ border: 0, borderRadius: '8px' }} 
@@ -107,7 +102,7 @@ export default function Footer() {
                     className="opacity-90 hover:opacity-100 transition-opacity grayscale-[50%] hover:grayscale-0"
                 ></iframe>
             </div>
-            <a href="https://maps.google.com/?q=Medanta+The+Medicity" target="_blank" className="flex items-center gap-2 text-xs text-slate-400 mt-3 hover:text-medical-accent transition-colors group">
+            <a href="https://maps.app.goo.gl/8cpFGhRtUJPkzsPeA" target="_blank" className="flex items-center gap-2 text-xs text-slate-400 mt-3 hover:text-medical-accent transition-colors group">
                <MapPin className="w-3 h-3 group-hover:animate-bounce" />
                Open in Google Maps
             </a>
@@ -117,13 +112,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-slate-500">
            <p>© {new Date().getFullYear()} Angel Hotel & Suites. All Rights Reserved.</p>
-           <div className="flex items-center gap-6">
-                <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                <span className="w-1 h-1 rounded-full bg-slate-700"></span>
-                <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                <span className="w-1 h-1 rounded-full bg-slate-700"></span>
-                <a href="#" className="hover:text-white transition-colors">Sitemap</a>
-            </div>
+           
         </div>
       </div>
     </footer>

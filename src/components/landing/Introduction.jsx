@@ -32,24 +32,24 @@ export default function Introduction() {
           <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
             <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg">
                <Image 
-                 src="/Restaurant.jpg" 
-                 alt="Healthy Dining for Patients" 
+                 src="/Luxury Room-main.jpg" 
+                 alt="Luxury Room" 
                  fill
                  className="object-cover hover:scale-105 transition-transform duration-700"
                />
                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                 <p className="text-white font-bold text-lg">Hygienic & Healthy Dining</p>
+                 <p className="text-white font-bold text-lg">Luxury Room</p>
                </div>
             </div>
             <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg">
                <Image 
-                 src="/Buffet.jpg" 
-                 alt="Buffet Service" 
+                 src="/Deluxe Room-2.jpg" 
+                 alt="Deluxe Room" 
                  fill
                  className="object-cover hover:scale-105 transition-transform duration-700"
                />
                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                 <p className="text-white font-bold text-lg">Daily Fresh Buffet</p>
+                 <p className="text-white font-bold text-lg">Deluxe Room</p>
                </div>
             </div>
           </div>

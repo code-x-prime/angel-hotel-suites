@@ -63,29 +63,32 @@ function PerkCard({ item, index }) {
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
       onMouseEnter={() => setHovered(true)}
-      style={{ rotateX, rotateY, transformStyle: "preserve-3d", perspective: 900 }}
+      style={{ 
+        rotateX, 
+        rotateY, 
+        transformStyle: "preserve-3d", 
+        perspective: 900,
+        backgroundColor: `${item.accent}08`,
+        borderColor: `${item.accent}15`,
+      }}
       initial={{ opacity: 0, y: 50, scale: 0.92 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.55, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-      className="relative bg-white rounded-lg p-6 shadow-[0_2px_20px_rgba(0,0,0,0.07)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.13)] transition-shadow duration-300 cursor-default overflow-hidden flex flex-col items-center text-center"
+      className="relative rounded-2xl p-6 shadow-[0_4px_25px_rgba(0,0,0,0.04)] border transition-all duration-300 backdrop-blur-sm group"
     >
-      {/* Top accent line */}
-      <motion.div
-        className="absolute top-0 left-0 right-0 h-[3px] rounded-t-lg"
-        style={{ background: item.accent }}
-        initial={{ scaleX: 0, originX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.65, delay: index * 0.1 + 0.3, ease: "easeOut" }}
+      {/* Decorative Corner Element */}
+      <div 
+        className="absolute -top-px -left-px w-12 h-12 rounded-tl-2xl border-t-2 border-l-2 opacity-20 group-hover:opacity-100 transition-opacity duration-500"
+        style={{ borderColor: item.accent }}
       />
 
       {/* Glow */}
       <motion.div
-        className="absolute inset-0 pointer-events-none rounded-lg"
+        className="absolute inset-0 pointer-events-none rounded-2xl"
         animate={{ opacity: hovered ? 1 : 0 }}
         transition={{ duration: 0.35 }}
-        style={{ background: `radial-gradient(circle at 50% 30%, ${item.accent}18 0%, transparent 70%)` }}
+        style={{ background: `radial-gradient(circle at 50% 30%, ${item.accent}20 0%, transparent 70%)` }}
       />
 
       {/* Tag badge top-right */}
@@ -94,25 +97,29 @@ function PerkCard({ item, index }) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4, delay: index * 0.1 + 0.45 }}
-        className="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full"
-        style={{ backgroundColor: `${item.accent}18`, color: item.accent }}
+        className="absolute top-4 right-4 text-[10px] font-bold px-2.5 py-1 rounded-full border shadow-sm"
+        style={{ 
+          backgroundColor: `${item.accent}15`, 
+          color: item.accent,
+          borderColor: `${item.accent}25`
+        }}
       >
         {item.tag}
       </motion.span>
 
       {/* Icon */}
       <motion.div
-        className="w-14 h-14 rounded-lg flex items-center justify-center mb-5 mt-2 relative z-10"
-        style={{ backgroundColor: `${item.accent}18` }}
-        whileHover={{ scale: 1.12, rotate: [0, -6, 6, 0] }}
+        className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 mt-2 relative z-10 shadow-lg shadow-black/5"
+        style={{ backgroundColor: item.accent }}
+        whileHover={{ scale: 1.12, rotate: -6 }}
         transition={{ type: "spring", stiffness: 300 }}
       >
-        <item.icon className="w-6 h-6" style={{ color: item.accent }} />
+        <item.icon className="w-6 h-6 text-white" />
       </motion.div>
 
-      <div className="relative z-10" style={{ transform: "translateZ(8px)" }}>
-        <h3 className="font-bold text-slate-800 mb-2 text-base leading-snug">{item.title}</h3>
-        <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+      <div className="relative z-10 text-center" style={{ transform: "translateZ(10px)" }}>
+        <h3 className="font-extrabold text-slate-900 mb-2.5 text-lg leading-tight">{item.title}</h3>
+        <p className="text-sm text-slate-600 leading-relaxed font-medium">{item.desc}</p>
       </div>
 
       {/* Corner number */}
@@ -130,21 +137,30 @@ function PerkCard({ item, index }) {
 function Blob({ className, delay = 0 }) {
   return (
     <motion.div
-      className={`absolute rounded-full blur-3xl pointer-events-none ${className}`}
-      animate={{ y: [0, -18, 0], scale: [1, 1.06, 1] }}
-      transition={{ duration: 7.5, delay, repeat: Infinity, ease: "easeInOut" }}
+      className={`absolute rounded-full blur-[100px] pointer-events-none mix-blend-multiply ${className}`}
+      animate={{ 
+        y: [0, -40, 20, 0],
+        x: [0, 30, -20, 0],
+        scale: [1, 1.2, 0.9, 1],
+      }}
+      transition={{ 
+        duration: 15, 
+        delay, 
+        repeat: Infinity, 
+        ease: "easeInOut" 
+      }}
     />
   );
 }
 
 export default function DirectBooking() {
   return (
-    <section className="relative py-8 md:py-12 bg-[#f8fafc] overflow-hidden">
+    <section className="relative py-8 md:py-12 bg-white overflow-hidden">
 
       {/* Blobs */}
-      <Blob className="w-72 h-72 bg-green-100/50 -top-10 -right-16" delay={0} />
-      <Blob className="w-56 h-56 bg-violet-100/40 bottom-8 -left-12" delay={2} />
-      <Blob className="w-48 h-48 bg-blue-100/35 top-1/2 left-1/3" delay={1.3} />
+      <Blob className="w-[500px] h-[500px] bg-green-100/40 -top-20 -right-20" delay={0} />
+      <Blob className="w-[400px] h-[400px] bg-indigo-50/40 bottom-8 -left-20" delay={2} />
+      <Blob className="w-[300px] h-[300px] bg-blue-100/30 top-1/2 left-1/3" delay={1.3} />
 
       <div className="container relative z-10 px-6">
         <div className="max-w-5xl mx-auto">
