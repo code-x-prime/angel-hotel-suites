@@ -206,22 +206,34 @@ function TestimonialCard({ review }) {
 }
 
 const MarqueeRow = ({ items, direction = 1, speed = 40 }) => {
+  const [isPaused, setIsPaused] = useState(false);
+  
+  // Create a long enough list for seamless infinite loop
+  const duplicatedItems = [...items, ...items, ...items, ...items];
+  
   return (
-    <div className="relative overflow-hidden flex py-4">
+    <div 
+      className="relative overflow-hidden flex py-6 cursor-grab active:cursor-grabbing"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <motion.div 
         className="flex"
-        animate={{ 
+        drag="x"
+        dragConstraints={{ left: -3000, right: 0 }}
+        dragElastic={0.1}
+        animate={isPaused ? {} : { 
           x: direction > 0 ? [0, -1800] : [-1800, 0] 
         }}
         transition={{ 
           duration: speed, 
           repeat: Infinity, 
           ease: "linear",
-          repeatType: "loop"
+          repeatType: "loop",
         }}
         style={{ width: "max-content" }}
       >
-        {[...items, ...items, ...items, ...items].map((review, i) => (
+        {duplicatedItems.map((review, i) => (
           <TestimonialCard key={i} review={review} />
         ))}
       </motion.div>
