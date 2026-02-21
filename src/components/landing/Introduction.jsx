@@ -33,12 +33,12 @@ export default function Introduction() {
             <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg">
                <Image 
                  src="/Recep-1.jpg" 
-                 alt="Luxury Room" 
+                 alt="Reception" 
                  fill
                  className="object-cover hover:scale-105 transition-transform duration-700"
                />
                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                 <p className="text-white font-bold text-lg">Luxury Room</p>
+                 <p className="text-white font-bold text-lg">Reception</p>
                </div>
             </div>
             <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg">

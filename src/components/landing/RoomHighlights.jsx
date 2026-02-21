@@ -21,8 +21,8 @@ const rooms = [
     desc: "The Studio Suite Room offers a spacious 350 sq. ft. layout thoughtfully designed for comfort and convenience. It features a king-size double bed with 8' thick orthopedic mattress along with a separate seating area, perfect for relaxing or informal meetings.",
     icon: Users,
     accent: "#22c98a",
-    tag: "Family Friendly",
-    price: "₹3500",
+    tag: "Affordable Luxury",
+    price: "₹4000",
   },
   {
     image: "/Family Suite-1.jpg",
@@ -30,7 +30,7 @@ const rooms = [
     desc: "The Family Suite Room spans an expansive 600 sq. ft., designed with two separate bedrooms, each with its own attached washroom for complete privacy and comfort. A dedicated seating area provides the perfect space for family bonding or relaxation. The suite also includes a fully furnished private kitchen, making it ideal for extended stays and a true home-away-from-home experience.",
     icon: Star,
     accent: "#f59e42",
-    tag: "Best Value",
+    tag: "Ideal for Families",
     price: "₹7000",
   },
 ];
