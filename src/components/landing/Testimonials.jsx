@@ -314,9 +314,7 @@ export default function Testimonials() {
 
         </motion.div>
 
-      {/* Blobs */}
-      <Blob className="w-[600px] h-[600px] bg-yellow-50/60 -top-32 -left-40" delay={0} />
-      <Blob className="w-[500px] h-[500px] bg-blue-50/50 bottom-0 -right-20" delay={2} />
+     
 
       <div className="max-w-[1440px] mx-auto relative z-10 px-6">
         {/* Heading */}
