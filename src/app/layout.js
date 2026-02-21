@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import CustomCursor from "@/components/ui/CustomCursor";
 import Script from "next/script";
 
 const inter = Inter({
@@ -49,8 +48,8 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth lg:cursor-none">
-      <body className={`${inter.variable} font-sans bg-background text-medical-text antialiased overflow-x-hidden lg:cursor-none`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.variable} font-sans bg-background text-medical-text antialiased overflow-x-hidden`}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-T4XNCW2PH0"
           strategy="afterInteractive"
@@ -64,7 +63,7 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-T4XNCW2PH0');
           `}
         </Script>
-        <CustomCursor />
+
         {children}
       </body>
     </html>

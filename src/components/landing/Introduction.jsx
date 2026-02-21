@@ -32,7 +32,7 @@ export default function Introduction() {
           <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
             <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg">
                <Image 
-                 src="/Luxury Room-main.jpg" 
+                 src="/Suite-1.jpg" 
                  alt="Luxury Room" 
                  fill
                  className="object-cover hover:scale-105 transition-transform duration-700"

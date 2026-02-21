@@ -27,18 +27,18 @@ export default function LocationAdvantage() {
     },
     { 
       icon: Building2, 
-      title: "Close to Sohna Road", 
+      title: "Close to Sohna Road & Rajiv Chowk", 
       desc: "Hub for shopping, dining, and corporate offices." 
     },
     { 
       icon: Navigation, 
       title: "Easy Access to HUDA City Centre", 
-      desc: "Connected to 3 Metro Station (Yellow Line)." 
+      desc: "3 kms from Millenium City Centre Metro Station (Yellow Line)" 
     },
     { 
       icon: Utensils, 
       title: "Nearby Restaurants & Pharmacy", 
-      desc: "Only 3KM from Medanta Cybercity" 
+      desc: "Everything you need is just a few steps away." 
     }
   ];
 
@@ -89,7 +89,7 @@ export default function LocationAdvantage() {
 
             <motion.div variants={item} className="mt-4">
               <a 
-                href="https://maps.app.goo.gl/CJqbtra2atNX2yhh9" 
+                href="https://maps.app.goo.gl/vch2QYkmkgTycnXRA" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-medical-primary font-bold hover:text-medical-dark transition-colors group"
@@ -109,7 +109,7 @@ export default function LocationAdvantage() {
             className="h-[500px] w-full rounded-lg overflow-hidden shadow-lg border border-white/50 relative bg-slate-200"
           >
              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7016.958360150675!2d77.03511694328186!3d28.434968203092275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d186ec89f751b%3A0xdc2ab32fc4675cac!2sMedanta%20-%20The%20Medicity%2C%20Gurugram!5e0!3m2!1sen!2sin!4v1771668971969!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12869.079704168935!2d77.0307464001716!3d28.43561503434531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d198466e6d1ad%3A0x868fcfc79199019b!2sThe%20Angel%20Hotel%20%26%20Suites%20near%20Medanta!5e0!3m2!1sen!2sin!4v1771678261984!5m2!1sen!2sin" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 

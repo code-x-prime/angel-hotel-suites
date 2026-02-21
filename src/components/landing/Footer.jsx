@@ -93,7 +93,7 @@ export default function Footer() {
             </h4>
             <div className="bg-white/5 p-1 rounded-xl border border-white/10 shadow-inner">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7016.958360355739!2d77.0351169!3d28.4349682!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d186ec89f751b%3A0xdc2ab32fc4675cac!2sMedanta%20-%20The%20Medicity%2C%20Gurugram!5e0!3m2!1sen!2sin!4v1771671702800!5m2!1sen!2sin" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12869.079704168935!2d77.0307464001716!3d28.43561503434531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d198466e6d1ad%3A0x868fcfc79199019b!2sThe%20Angel%20Hotel%20%26%20Suites%20near%20Medanta!5e0!3m2!1sen!2sin!4v1771678261984!5m2!1sen!2sin" 
                     width="100%" 
                     height="180" 
                     style={{ border: 0, borderRadius: '8px' }} 
@@ -102,7 +102,7 @@ export default function Footer() {
                     className="opacity-90 hover:opacity-100 transition-opacity grayscale-[50%] hover:grayscale-0"
                 ></iframe>
             </div>
-            <a href="https://maps.app.goo.gl/8cpFGhRtUJPkzsPeA" target="_blank" className="flex items-center gap-2 text-xs text-slate-400 mt-3 hover:text-medical-accent transition-colors group">
+            <a href="https://maps.app.goo.gl/vch2QYkmkgTycnXRA" target="_blank" className="flex items-center gap-2 text-xs text-slate-400 mt-3 hover:text-medical-accent transition-colors group">
                <MapPin className="w-3 h-3 group-hover:animate-bounce" />
                Open in Google Maps
             </a>

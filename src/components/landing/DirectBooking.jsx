@@ -9,7 +9,7 @@ const perks = [
     icon: Tag,
     title: "Lowest Price Guaranteed",
     desc: "Cheaper than Agoda, Booking.com & MakeMyTrip",
-    accent: "#22c98a",
+    accent: "#a78bfa",
     tag: "Save More",
   },
   {
@@ -30,7 +30,7 @@ const perks = [
     icon: MessageCircle,
     title: "Direct WhatsApp Support",
     desc: "Talk directly to the hotel manager",
-    accent: "#a78bfa",
+    accent: "#22c98a",
     tag: "Instant Help",
   },
 ];
@@ -69,7 +69,7 @@ function PerkCard({ item, index }) {
         transformStyle: "preserve-3d", 
         perspective: 900,
         backgroundColor: `${item.accent}08`,
-        borderColor: `${item.accent}15`,
+        borderColor: `${item.accent}`,
       }}
       initial={{ opacity: 0, y: 50, scale: 0.92 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -79,7 +79,7 @@ function PerkCard({ item, index }) {
     >
       {/* Decorative Corner Element */}
       <div 
-        className="absolute -top-px -left-px w-12 h-12 rounded-tl-2xl border-t-2 border-l-2 opacity-20 group-hover:opacity-100 transition-opacity duration-500"
+        className="absolute -top-px -left-px w-12 h-12 rounded-tl-2xl border-2 border-2 opacity-20 group-hover:opacity-100 transition-opacity duration-500"
         style={{ borderColor: item.accent }}
       />
 

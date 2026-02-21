@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, ArrowRight } from "lucide-react";
+import {  Phone, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import AnimatedButton from "@/components/ui/AnimatedButton";
@@ -32,16 +32,7 @@ const itemVariants = {
 };
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <>
@@ -49,22 +40,18 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={cn(
-          "fixed z-50 transition-all duration-500 ease-in-out font-sans flex items-center justify-center",
-          scrolled
-            ? "top-4 left-0 right-0 mx-auto w-[90%] max-w-7xl rounded-2xl bg-white/90 backdrop-blur-md shadow-lg border border-white/20 py-3"
-            : "top-0 left-0 w-full bg-transparent py-5 border-b border-white/10"
-        )}
+        className="absolute top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out font-sans flex items-center justify-center bg-transparent py-5 border-b border-white/10"
       >
         <div className="w-full px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group z-50 relative">
-            <Image src="/logo.png" width={180} height={180} alt="Angel Hotel Logo"
-
-              className={
-                scrolled ? " h-auto transition-all duration-300 group-hover:scale-105 "
-                  : " h-auto transition-all duration-300 group-hover:scale-105 bg-white/90 rounded-md p-1"
-              } />
+            <Image 
+              src="/logo.png" 
+              width={180} 
+              height={180} 
+              alt="Angel Hotel Logo"
+              className="h-auto transition-all duration-300 group-hover:scale-105 bg-white/90 rounded-md p-1" 
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -77,40 +64,20 @@ export default function Navbar() {
             <motion.div variants={itemVariants}>
               <Link
                 href="/"
-                className={cn(
-                  "text-sm font-medium transition-colors py-2 relative group",
-                  scrolled
-                    ? "text-slate-600 hover:text-[#066F89]"
-                    : "text-white/90 hover:text-white"
-                )}
+                className="text-sm font-medium transition-colors py-2 relative group text-white/90 hover:text-white"
               >
                 Home
-                <span
-                  className={cn(
-                    "absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full",
-                    scrolled ? "bg-[#066F89]" : "bg-white"
-                  )}
-                />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-white" />
               </Link>
             </motion.div>
             {navLinks.map((link) => (
               <motion.div key={link.label} variants={itemVariants}>
                 <a
                   href={link.href}
-                  className={cn(
-                    "text-sm font-medium transition-colors py-2 relative group",
-                    scrolled
-                      ? "text-slate-600 hover:text-[#066F89]"
-                      : "text-white/90 hover:text-white"
-                  )}
+                  className="text-sm font-medium transition-colors py-2 relative group text-white/90 hover:text-white"
                 >
                   {link.label}
-                  <span
-                    className={cn(
-                      "absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full",
-                      scrolled ? "bg-[#066F89]" : "bg-white"
-                    )}
-                  />
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-white" />
                 </a>
               </motion.div>
             ))}
@@ -125,12 +92,7 @@ export default function Navbar() {
           >
             <a
               href="tel:+919205601379"
-              className={cn(
-                "flex items-center gap-2 text-sm font-semibold transition-colors duration-300",
-                scrolled
-                  ? "text-medical-primary hover:text-medical-dark"
-                  : "text-white hover:text-white/80"
-              )}
+              className="flex items-center gap-2 text-sm font-semibold transition-colors duration-300 text-white hover:text-white/80"
             >
               <Phone className="w-4 h-4" />
               <span>+91 92056 01379</span>
@@ -154,21 +116,21 @@ export default function Navbar() {
                 animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
                 className={cn(
                   "w-6 h-0.5 block transition-colors duration-300",
-                  scrolled || mobileOpen ? "bg-slate-800" : "bg-white"
+                  mobileOpen ? "bg-slate-800" : "bg-white"
                 )}
               />
               <motion.span
                 animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
                 className={cn(
                   "w-6 h-0.5 block transition-colors duration-300",
-                  scrolled || mobileOpen ? "bg-slate-800" : "bg-white"
+                  mobileOpen ? "bg-slate-800" : "bg-white"
                 )}
               />
               <motion.span
                 animate={mobileOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
                 className={cn(
                   "w-6 h-0.5 block transition-colors duration-300",
-                  scrolled || mobileOpen ? "bg-slate-800" : "bg-white"
+                  mobileOpen ? "bg-slate-800" : "bg-white"
                 )}
               />
             </div>
